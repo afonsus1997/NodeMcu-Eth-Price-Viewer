@@ -114,8 +114,13 @@ String LastPrice;
 String LastTime;
 String Time;
 String Price;
+<<<<<<< HEAD
 const char* ssid     = "SSID";
 const char* password = "PASSWORD";
+=======
+const char* ssid     = "Wifi SSID";
+const char* password = "Password";
+>>>>>>> master
  
 const char* host = "api.thingspeak.com";
  
