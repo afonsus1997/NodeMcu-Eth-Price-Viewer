@@ -10,8 +10,8 @@ String LastPrice;
 String LastTime;
 String Time;
 String Price;
-const char* ssid     = "Rapture";
-const char* password = "ichosetheimpossible...";
+const char* ssid     = "Wifi SSID";
+const char* password = "Password";
  
 const char* host = "api.thingspeak.com";
  
