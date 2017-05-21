@@ -273,7 +273,7 @@ void loop() {
     screenPriceBTC(PriceBTC, 7);
     screenTime(Time);
     
-    delay(3000);
+    //delay(3000);
     
     
     
