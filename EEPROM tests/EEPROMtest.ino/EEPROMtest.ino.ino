@@ -65,7 +65,7 @@ j = 0;
 }
 Serial.print("\n");
 
-  for(int x=passStartPOS;x<passStart+passSize;x++){
+  for(int x=passStart;x<passStart+passSize;x++){
   char c = char(EEPROM.read(x));
   Serial.print(c);
   
