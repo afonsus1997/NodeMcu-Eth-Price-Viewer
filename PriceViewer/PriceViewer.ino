@@ -2,7 +2,7 @@
 #include <TFT_eSPI.h> // Graphics and font library for ILI9341 driver chip
 #include <SPI.h>
 #include "logos.h"
-
+#include <EEPROM.h>
 
 
 #define TFT_GREY 0x5AEB // New colour
@@ -15,6 +15,9 @@
 #define YELLOW  0xFFE0
 #define WHITE   0xFFFF
 #define GREY     0xD6BA
+int address = 0;
+byte value;
+
 
 int pricePOSETHx = 20;
 int pricePOSETHy = 155;
@@ -49,7 +52,13 @@ void setup() {
   tft.fillScreen(TFT_BLACK);
   Serial.begin(9600);
   delay(10);
- 
+  EEPROM.begin(512);
+
+  ssid = EEPROM.read(0);
+  password = EEPROM.read(1); 
+
+
+  
   // We start by connecting to a WiFi network
   tft.setTextColor(TFT_GREEN);
   tft.setTextFont(1);
